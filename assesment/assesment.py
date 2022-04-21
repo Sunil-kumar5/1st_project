@@ -326,14 +326,14 @@ group even and odd index values with comprehension"""
 # print(res)
 
 
-a = filter(lambda x: x**2, [1,2,3,4])
+# a = filter(lambda x: x**2, [1,2,3,4])
 # print(list(a))    #[1,2,3,4]
 #
-a = map(lambda x: x%2 == 0, a)
+# a = map(lambda x: x%2 == 0, a)
 # print(a(10))         # a not defined
 
 
-a = map(lambda x: x**2, [1,2,3,4])
+# a = map(lambda x: x**2, [1,2,3,4])
 # print(list(a))     #[1, 4, 9, 16]
 
 # a = lambda x, y: x*2, y+3
@@ -357,18 +357,19 @@ a = map(lambda x: x**2, [1,2,3,4])
 #         a = b
 #         b = c
 #     return f"{num} is not fibo"
-# print(fibo_(5))
+# print(fibo_(6))
 
 
 
 """to print n fibo numbers"""
+
 # def rec_fibo(n):
 #     if n <= 1:
 #         return n
 #     else:
 #         return(rec_fibo(n-1) + rec_fibo(n-2))
 #
-# print(rec_fibo(3))
+# print(rec_fibo(10))
 
 
 #sorting
@@ -400,9 +401,79 @@ a = map(lambda x: x**2, [1,2,3,4])
 # d = {"python":15,"java":2,"c":3}
 # print(sorted(d.items(),key=lambda item:item[-1]))
 
-s = "create a dictionary with the item in a tuple as key the and its"
-list_ = s.split()
-d = {word:list_.count(word) for word in list_}
-print(d)
-res = sorted(d.items(), key=lambda item:item[-1])
-print(res[-1])
+# s = "create a dictionary with the item in a tuple as key the and its"
+# list_ = s.split()
+# d = {word:list_.count(word) for word in list_}
+# print(d)
+# res = sorted(d.items(), key=lambda item:item[-1])
+# print(res[-1])
+
+
+
+
+# a = ("red","blue", "green")
+# b = ("abc", "sdfghyub", "vbnhjmbnm","rtyuiofghj","ghjkasdfg", "ghgh", "huj")
+# temp1 = len(a)   # 3
+# temp2 = len(b)    # 7
+# for i in range(temp2):
+#     print(b[i], a[i % temp1])
+
+######  fibo
+
+# num = 10
+# n1, n2 = 0, 1
+# print(n1, n2, end=",")
+# for i in range(2, num):
+#     n3 = n1 + n2
+#     n1 = n2
+#     n2 = n3
+#     print(n3, end="  ")
+# print()
+
+######################
+
+# print repeated values in ascending order
+       # By loop
+
+# l1 = [1,5,2,4,5,2,1,6,4,5]
+# d = []
+# for i in l1:
+#     if l1.count(i) > 1:
+#         if i not in d:
+#             d.append(i)
+# print(sorted(d))                 ## [1, 2, 4, 5]
+
+       # Comprension
+
+# res = sorted([i for i in set(l1) if l1.count(i) > 1])  ## not using set = [1, 1, 2, 2, 4, 4, 5, 5]
+# print(res)            ### [1, 2, 4, 5]
+################################
+# Get the keys which are having the value as True in thr form of list
+# d = {1:True, 2:False, 3: False, 4: True}
+# res = [key for key,value in d.items() if value == True]
+# print(res)         ### [1, 4]
+
+# Replace the value True with Pass
+# res ={key:"Pass" if value==True else value for key,value in d.items() }
+# print(res)         ###  {1: 'Pass', 2: False, 3: False, 4: 'Pass'}
+###############################
+
+# whatsapp
+
+# import pyautogui as pg
+# import time
+# time.sleep(10)
+#
+# for i in range(10):
+#     pg.write("123")
+#     pg.press('enter')
+#     pg.write("1432")
+#     pg.press('enter')
+####################################
+
+# l= [1,3,4,5,6]
+# i = len(l)-1
+# while i>=0:
+#     print(l[i],end=",")
+#     i -= 1
+

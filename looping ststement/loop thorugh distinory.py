@@ -29,7 +29,7 @@
 # for key,value in s.items():
 #     print(value,end=" ")
 #
-# """print items along with their indices"""
+"""print items along with their indices"""
 # for  s.items()
 #
 
@@ -152,12 +152,12 @@ string = "hello world"
 """wap to get the following output"""
 
 # s = " hello world welcome to python programming hi there"
-#
+# #
 # from collections import defaultdict
-#
+# #
 # list_ = s.split()
 # dd = defaultdict(list)
-#
+# #
 # for word in list_:
 #     #dd[word[0]] += [word]
 #     dd[word[0]].append(word)
@@ -184,7 +184,7 @@ names = ["apple", "google", "gmail", "apple","gmail","google","firefox"]
 #     dd[item] += [index]
 # print(dd)
 
-s = {"a": 1, "b": 2,"c": 3,"d": 4}
+# s = {"a": 1, "b": 2,"c": 3,"d": 4}
 # s1 = {}
 # for key in s:
 #     value = s[key]
@@ -192,7 +192,9 @@ s = {"a": 1, "b": 2,"c": 3,"d": 4}
 # print(s1)
 
 #using d.items()
-d2 = {}
-for key,value in s.items():
-    d2[value] = key
-print(d2)
+# d2 = {}
+# for key,value in s.items():
+#     d2[value] = key
+# print(d2)
+
+

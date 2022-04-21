@@ -10,12 +10,12 @@
 # set_ = ["python", "dad", " hai", "madam", "mom","malayalam"]
 # key = "mom"
 # for ele in set_:
-#     if ele == key:          xx
-#         set_.discard(key)
+#     if ele == key:
+#         set_.remove(key)
 #         break
 # print(set_)
 
-"""wap to create a set with the list elements if the element is paindrome"""
+"""wap to create a set with the list elements if the element is palindrome"""
 # set_ = ["python", "dad", " hai", "madam", "mom","malayalam"]
 # res = set()
 # for ele in set_:

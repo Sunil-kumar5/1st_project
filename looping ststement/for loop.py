@@ -51,7 +51,7 @@
 #     print(key, h[key], sep="-->")
 #
 """wap to print index and the element in a string"""
-s = "hello"
+#s = "hello"
 # for item in range(len(s)):
 #     print(item, s[item])
 #

@@ -1,7 +1,7 @@
 import csv
 
-path = r'C:\Users\Sunil R D\PycharmProjects\1st project\files_directory\csv_files\employees.csv'
-test_ =r'C:\Users\Sunil R D\PycharmProjects\1st project\files_directory\csv_files\test.csv'
+path = r'C:\Users\Sunil R D\PycharmProjects\pythonProject\1st project\files_directory\csv_files\employees.csv'
+test_ =r'C:\Users\Sunil R D\PycharmProjects\pythonProject\1st project\files_directory\csv_files\test.csv'
 vacci_ =r'C:\Users\Sunil R D\PycharmProjects\1st project\files_directory\csv_files\vaccination_data.csv'
 from collections import defaultdict
 import os
@@ -11,7 +11,7 @@ import os
 
 
 """program to read all the names in employee.csv file"""
-# with open(path) as file:
+# with open(r'C:\Users\Sunil R D\PycharmProjects\pythonProject\1st project\files_directory\csv_files\employees.csv') as file:
 #     read_obj = csv.reader(file)
 #     for i in read_obj:
 #         print(i[0])
@@ -47,6 +47,7 @@ import os
 #         dd[row[2]] += [row[0]]
 # print(dd)
 
+
 """ to sort the shares in test.csv file"""
 # with open(test_) as file:
 #     r_obj = csv.DictReader(file)
@@ -63,7 +64,7 @@ import os
 #     for row in r_obj:
 #         sum += int(row[1])
 #
-#     print(sum)
+# print(sum)
 
 
 """ 7)a  Total vaccination of the countries"""

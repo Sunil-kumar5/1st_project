@@ -12,7 +12,7 @@ from time import time , sleep
 #     return a+b
 # print(add(2,2))
 
-""" 2) logging or info decorater"""
+""" 2) logging or info decorator"""
 
 # def log(func):
 #     def wrapper(*args,**kwargs):
@@ -87,20 +87,24 @@ from time import time , sleep
 # count_("sunil")
 
 """ 6) Decorator for function count"""
+
 # from collections import defaultdict
 #
-# count_ = defaultdict
+# count_ = defaultdict(int)
 #
 # def func_count(func):
 #     def wrapper(*args,**kwargs):
-#         count_[func.__name__] += 1         xxxxxxxxxx
-#         func(*args,**kwargs)
-#     return wrapper
+#         count_[func.__name__] += 1
+#         return func(*args,**kwargs)   # Execution part
+#     return wrapper           #  returning the value
 #
 # @func_count
-# def  add(a,b):
-#     print(a+b)
-# add(1,3)
+# def add(a,b):
+#     return a+b
+# print(add(1,3))
+# print(add(4,5))
+# print(count_)
+
 ###################################
 
 # def count_(func):
@@ -172,3 +176,139 @@ from time import time , sleep
 #     print(a*b)
 # mul(4,6)
 
+""" 10) cache decorator"""
+
+# def cache(func):
+#     func._cache = {}   # attaching an empty dict
+#     def wrapper(*args,**kwargs):
+#         if args in func._cache:
+#             print("getting result from cache")
+#             return func._cache[args]
+#         print("executing func for the first time")
+#         result = func(*args,**kwargs)
+#         func._cache[args] = result
+#         return result
+#     return wrapper
+#
+# @cache
+# def sub(a,b):
+#     return a-b
+# print(sub(6,1))
+# print(sub(7,4))
+# print(sub(9,5))
+# print(sub(6,1))
+
+""" 11) If there are 10 numbers  add 91+ at 1st if there 12 numbers add + at second index"""
+
+# def add_prefix(number):
+#     str_number = str(number)
+#     if len(str_number) == 10:
+#         str_number = "+91-" + str_number
+#         return str_number
+#     elif len(str_number) == 12 and str_number.startswith("91"):
+#         str_number = "+" + str_number[:2] + "-" + str_number[2:]
+#         return str_number
+#     else:
+#         return str_number
+# def prefix_couontry_code(func):
+#     def wrapper(*args,**kwargs):
+#         temp = args[0]
+#         processed_numbers = [add_prefix(number) for number in temp]
+#         return func(processed_numbers)
+#     return wrapper
+#
+# @prefix_couontry_code
+# # ph = [1234567890,9087654321,911234567890,119876543210]
+# def print_number(ph):
+#     for item in ph:
+#         print(item)
+# print_number([1234567890,9087654321,911234567890,119876543210])
+
+""" 12) To validate the data types"""
+
+# def validate_types(expected_type, actual_value):
+#     for expected_type, actual_value in zip(expected_type, actual_value):
+#         if not isinstance(actual_value, expected_type):
+#             raise TypeError("not same data type")
+#
+# def validate(*expected_types):
+#     def _validate(func):
+#         def wrapper(*args, **kwargs):
+#             validate_types(expected_types, args)
+#             return func(*args, **kwargs)
+#         return wrapper
+#     return _validate
+#
+# @validate(float, float)
+# def sub(a, b):
+#     return a - b
+# print(sub(2.2,3.3))
+#
+# @validate(int, float)
+# def mul(a, b):
+#     return a * b
+# print(mul(5,2.3))
+
+""" 13) Attaching a count attribute to the function object, to count the function call"""
+
+# def attach(func):
+#     func.count = 0
+#     return func
+#
+# @attach
+# def add(a,b):
+#     add.count += 1
+#     return a+b
+# print(add(2,5))
+# print(add(2,8))
+# print(add(41,5))
+# print(f"number of function calls = {add.count}")
+#
+# @attach
+# def sub(a,b):
+#     sub.count += 1
+#     return a-b
+# print(sub(2,5))
+# print(sub(8,5))
+# print(sub(255,5))
+# print(f"number of function calls = {sub.count}")
+
+""" 14)  """
+
+# functipon decorator
+#
+# def log(func):
+#     def wrapper(*args,**kwargs):
+#         print(f'calling  {func.__name__}')
+#         return func(*args,**kwargs)
+#     return wrapper
+#
+# # class decorator
+# class Log:
+#     def __init__(self,func):
+#         self.func = func
+#         def __call__ (self,*args,**kwargs):
+#             print(f'calling{self.func.__name__}')
+#             return self.func(*args,**kwargs)
+#
+# @log
+# def add(a,b):
+#     print(a+b)
+# add(1,2)
+#
+# @Log
+# def sub(a,b):
+#     print(a-b)
+# sub(4,2)
+###################
+# Extract only int
+
+L = ['2','HG3H','256','FG','95']
+# for item in L:
+#     for i in item:
+#         if '0' <= i <= '9':
+#             pass
+#         else:
+#             break
+#     else:
+#         print(item)

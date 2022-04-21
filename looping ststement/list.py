@@ -20,14 +20,14 @@
 #l1 = [2,4,5,"python"]
 # for item in l1:
 #     print(l1[::-1])
-#
+
 # print()
 
 # for i in range(-1,-len(l1)-1,-1):
 #     print(l1[i],end="|")
 
 # for i in reversed(l1):
-#     print(i, end=" ")
+#   print(i, end=" ")
 
 """"wap to print alternative element in a list"""
 #l = [2,3,4,5,6,7,7,8,6,9]
@@ -81,7 +81,7 @@
 #         res.append(i[::-1])
 # print(res)
 
-"""wap to reverse the element in the list if the element is of type string or else keep it as it is"""
+"""wap to reverse the element in the list if the element is of type string are else keep it as it is"""
 # l = ['sunil', 'java', 10, True, 19.3, "howsff"]
 # res =[]
 # for i in l:
@@ -129,17 +129,18 @@
 #         break
 # else:
 #     print("prime")
-#
+
 
 """ To print series of prime number"""
-# for n in range(50):
+# a = 10
+# for n in range(10):
 #     if n > 1:
 #         for i in range(2, n):
 #             if n % i == 0:
 #                 break
 #         else:
 #             print(n)
-#
+
 """wap to print all the elements other then the given element"""
 # numbers = [10,20,30,40,20,50,60]
 # n = 20
@@ -158,8 +159,8 @@
 #             print(n)
 
 """wap to print the palindromes in the given list"""
-l = ["python", "dad", " hai", "madam", "mom","malayalam"]
-res = []
-for ele in l:
-    if ele == ele[::-1]:
-        print(ele)
+# l = ["python", "dad", " hai", "madam", "mom","malayalam"]
+# res = []
+# for ele in l:
+#     if ele == ele[::-1]:
+#         print(ele)
