@@ -4,7 +4,7 @@ from selenium.webdriver.support.select import Select
 """ 1) """
 #lanches a new chrome browser
 driver = webdriver.Chrome("./chromedriver")
-# driver.get("https://www.google.co.in/")
+driver.get("https://www.google.co.in/")
 sleep(2)
 #navigate to google
 
@@ -166,23 +166,20 @@ sleep(2)
 from selenium import webdriver
 from time import sleep
 
-driver = webdriver.Chrome("./chromedriver.exe")
-
-
-from selenium.common.exceptions import NoSuchElementException
-
+# driver = webdriver.Chrome("./chromedriver.exe")
+#
+#
+# from selenium.common.exceptions import NoSuchElementException
+#
 # driver.get("https://www.goibibo.com/")
 # driver.maximize_window()
 # sleep(5)
 #
 # driver.find_element_by_xpath("//span[text()='Departure']").click()
 # sleep(2)
-
-# driver.find_element_by_xpath("//span[text()='Departure']").click()
-# sleep(2)
 #
-# # _month_year = "July 2022"
-# # _day = "5"
+# _month_year = "July 2022"
+# _day = "5"
 # def select_date(_month_year,_day):
 #     for _ in range(12):
 #         try:
@@ -272,10 +269,7 @@ from time import sleep
 # enter_text((By.ID, "FirstName"), value="hello")
 
 #
-
-
-
-
+from selenium.common import exceptions
 
 
 
@@ -539,13 +533,37 @@ import re
 
 ###############################
 
+# from selenium import webdriver
+# from time import sleep
+# from selenium.webdriver.common.action_chains import ActionChains
+# import os
+# driver = webdriver.Chrome(".\chromedriver")
+# driver.get("https://www.amazon.in/")
+# driver.maximize_window()
+# sleep(2)
+#
+# driver.find_element_by_xpath("//a[@class='nav-a  '][2]").click()
+# sleep(2)
+#
+# actions = ActionChains(driver)
+#
+# Mobiles = driver.find_element_by_xpath("//a[@class='nav-a nav-hasArrow']")
+# actions.move_to_element(Mobiles).perform()
+# sleep(2)
+#
+# samsung = driver.find_element_by_xpath("//a[text()='Samsung']")
+# actions.move_to_element(samsung).perform()
+# sleep(2)
+# samsung.click()
 
+# list_ = driver.find_elements_by_xpath("//span[@class='a-size-base-plus a-color-base a-text-normal']")
+# with open(r"C:\Users\Sunil R D\PycharmProjects\pythonProject\1st project\_selenium\list1.txt", "w") as file:
+#     for item in list_:
+#         file.writelines(item.text)
 
+# driver.close()
 
-
-
-
-
+##########
 
 
 

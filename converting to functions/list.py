@@ -170,7 +170,7 @@
 
 """ print all the extensions in the following list """
 
-files = ["youtube.txt", "amazon.pdf", "apple.xls", "flipkart.in"]
+# files = ["youtube.txt", "amazon.pdf", "apple.xls", "flipkart.in"]
 # def ext_(files):
 #     l = []
 #     for i in files:

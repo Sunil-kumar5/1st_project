@@ -22,6 +22,19 @@
 # s= "hello world"
 # res = s.replace("world","universe")
 # print(res)
+##################
+
+## To reverse the string without using inbuilt function
+# a = 'sunil'
+# res =''
+# for i in a:
+#     res = i + res
+# print(res)
+## OR ##
+# for i in range((len(a)-1),-1,-1):
+#     res += a[i]
+# print(res)
+#######################
 
 ### 4) convert string to list and vice-versa
 
@@ -257,7 +270,7 @@ from itertools import islice
 # d = mydict({'a': 1, 'f': 4})
 # print(d['a'])
 # print(d.f)
-###################3
+###################
 
 # 23) Write a python program to get the below output
 #
@@ -360,7 +373,7 @@ from itertools import islice
 # 33) Count the number of occurrences of "CRITICAL", "INFO"
 # and "ERROR" lines in a log file.
 # lines = """CRITICAL:Hello world
-# INFO: This is an info\
+# INFO: This is an info
 # ERROR: This is an error
 # CRITICAL: This is critical
 # CRITICAL:Hello world
@@ -370,7 +383,7 @@ from itertools import islice
 # from collections import defaultdict
 # _errors = defaultdict(int)
 # for line in lines.split('\n'):
-#     error_type, other = line.strip().split(':')
+#     error_type, other = line.split(':')
 #     _errors[error_type] += 1
 # print(_errors)
 ###################
@@ -449,6 +462,7 @@ from itertools import islice
 # for item in m:
 #     print(item)
 ######## OR ########
+
 # m = map(lambda item: item ** 2,a)
 # for item in m:
 #     print(item)
@@ -471,12 +485,13 @@ from itertools import islice
 #     d[s].append(word)
 # print(d) ## {'aet': ['eat', 'ate', 'tea'], 'ehllo': ['hello'], 'eilnst': ['silent', 'listen']})
 ########################
+
 # 62) Write a program to count the number occurrences of
 # each item in the list without using any inbuilt functions
 # names = ['apple', 'google', 'apple', 'yahoo', 'google', 'facebook', 'gmail', 'yahoo']
 # res = {item: names.count(item) for item in names}
 # print(res)
-##### OR ###########
+######## OR ###########
 # unique_items = set(names)
 # d = {}
 # for item in unique_items:
@@ -494,7 +509,7 @@ from itertools import islice
 ###################
 # 65) Write a program to find the largest number in the list
 # without using any inbuilt funct
-# numbers = [100, 20, 30, 40, 50]
+# numbers = [100, 202, 30, 40, 50]
 # largest = 0
 # for item in numbers:
 #     if item > largest:
@@ -515,11 +530,11 @@ from itertools import islice
 # 'the', 'eyes', 'the', 'eyes', 'the', 'eyes', 'not', 'around', 'the', 'eyes', "don't", 'look', 'around', 'the',
 # 'eyes', 'look', 'into','my', 'eyes', "you're", 'under'
 # ]
-
+#
 # d = {item: words.count(item) for item in words}
 # common_ = sorted(d.items(), key= lambda item: item[-1])
 # print(common_[-1])
-###### OR #######
+# ##### OR #######
 # from collections import Counter
 # c = Counter(words)
 # print(c)
@@ -535,7 +550,7 @@ from itertools import islice
 #     return list(iterable)[-n:]
 # print(tail([3,4,5,6,3,2,45,1,1,1,1],4))
 # print(tail('sunil56',2))
-###################
+##################
 #70) Write a program to get all the duplicate
 #items and the number of times the item is repeated in the list.
 # names = ['apple', 'google', 'apple', 'yahoo', 'yahoo', 'facebook', 'apple', 'gmail', 'gmail', 'gmail', 'gmail']
@@ -662,12 +677,14 @@ from itertools import islice
 #     return ''.join(string)
 # print(rot_str("sunil56",2))     # 56sunil
 #################
+
 #79) Write a program to count the number of white spaces in a given string
 # import re
 # sentence = """Hello world welcome to Python Hi  How are you. Hi how are you"""
 # space = re.findall(r'\s',sentence)
 # print(len(space))
 ######################
+
 
 #87) Write a program to count no of capital letters in a string
 # sentence = "Hi How are You WelCome to PytHon"
@@ -711,7 +728,7 @@ from itertools import islice
 # def _series(iter1, iter2):
 #     diff = a[1] - a[0]
 #     c = iter1 + iter2
-#     return all([True if c[i] + diff == c[i+1] else False for i in range(0,len(c)-1)]
+#     return all([True if c[i] + diff == c[i+1] else False for i in range(0,len(c)-1)])
 #####################
 #Write a program to count the number of occurrences of non-special characters in a
 # given string
@@ -773,6 +790,7 @@ from itertools import islice
 # c = Counter(words)
 # print(c) # ({'How': 2, 'are': 2, 'you': 2, 'Hi': 1, 'there': 1, 'doing': 1, 'today': 1})
 ###############
+
 #104) Find all max length words from the below sentence
 
 # sentence = "hello world hi apple you yahoo to you"
@@ -796,7 +814,7 @@ from itertools import islice
 #121) Write a program to remove duplicates from the list without using set or empty list
 # l1 = [1, 2, 3, 4, 1, 2, 3, 4, 3, 4, 4]
 # l2 = l1[::]
-# for item in l2:
+# for item in l1:
 #     if l1.count(item) > 1:
 #         l1.remove(item)
 # print(l1)

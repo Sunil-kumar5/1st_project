@@ -18,5 +18,5 @@ def wait(func):
         wait_ = WebDriverWait(instance.driver, Config.MAX_TIMEOUT)
         v = _visibility_of_element_located(locator)
         wait_.until(v)
-        return func(*args, **kwargs)        # actual generic func gets executed
+        return func(*args, **kwargs)    # actual generic func gets executed
     return wrapper

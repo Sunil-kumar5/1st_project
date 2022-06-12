@@ -477,3 +477,110 @@ group even and odd index values with comprehension"""
 #     print(l[i],end=",")
 #     i -= 1
 
+#####################################
+
+# a = '$50,000'
+# res = ''
+# for i in a:
+#     if '0' <= i <= '9':
+#         res += i
+#
+# print(res)
+
+############
+## To print infinity loop
+# i = 0
+# while i < 1:
+#     print(i)
+#
+#############
+## print {'h':3}
+# from collections import defaultdict
+# d = {'a':1,'b':[2,3,4],'c':[{'g':1,'h':3}],'d':4}
+# for key,value in d.items():
+#     if key == 'c':
+#         b = value
+#         ch = 'h'
+#         s = defaultdict()
+#         for i in value:
+#             for key,value in i.items():
+#                 if key == ch:
+#                     s[key] = value
+#                     print(s)    ###### {'h': 3}
+##############
+### To capitalize 1st chaaracter
+
+# print("pfgh".capitalize())
+
+######################
+## For extract mail id
+import re
+# my_mail='sunil sdfghjkyu@dfgh  sunilrd56@gmail.com'
+# mail2 = re.findall("[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$", my_mail)
+# print(mail2)
+#
+# email1= re.findall("\S+@\S+\.\S+", my_mail)
+# print(email1)
+
+###############
+# s = ['hii', 'hello', 'oleh']
+#
+# res = []
+# for i in s:
+#     print()
+
+##########################
+"""Count how many fruits in data
+   Add 'Biology' in 'Subject'
+   Create new key in  'Animal' with value ['dog','cat']"""
+
+# data = {'Fruit':['Apple','Banana','Orange'],'Subject':['Phy','Math','English']}
+# count_Fruits = 0
+# for key,value in data.items():
+#     if key == 'Fruit':
+#         count_Fruits += len(value)
+#     if key == 'Subject':
+#         value.append('Biology')
+# data['Animal'] = ['dog','cat']
+#
+# print(count_Fruits)
+# print(data)
+################
+
+# l =[0,1,1,1,0,1,0,1,1,0,0,0]
+# zero = []
+# one = []
+# res = []
+# for i in l:
+#     if i == 0:
+#         zero.append(i)
+#     else:
+#         one.append(i)
+# for i,j in zip(zero,one):
+#     res.append(i,j)
+
+
+##############
+## reverse a string
+
+# s = input('enter the sting:')
+# def reverse_(string):
+#     res = ''
+#     for i in range((len(string)-1),-1,-1):
+#         res += string[i]
+#     return res
+# print(reverse_(s))
+
+## fibo
+
+# num = 10
+# n1, n2 = 0, 1
+# print(n1, n2, end=",")
+# for i in range(2, num):
+#     n3 = n1 + n2
+#     n1 = n2
+#     n2 = n3
+#     print(n3, end="  ")
+# print()
+#######
+

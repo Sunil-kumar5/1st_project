@@ -34,7 +34,7 @@
 #
 
 """hjg"""
-string = "hello world"
+# string = "hello world"
 # d = {}
 # for i in string:
 #     count = 0
